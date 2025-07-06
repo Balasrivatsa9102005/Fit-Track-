@@ -10,11 +10,11 @@ import PostWorkout from "./pages/PostWorkout";
 import CalendarPage from "./pages/CalendarPage";
 import "./styles/App.css";
 
-// Custom wrapper to use hooks like useLocation outside the main return
+
 function AppWrapper() {
   const location = useLocation();
 
-  // Define routes that should NOT show the Navbar
+
   const noNavbarRoutes = ["/", "/login", "/register"];
 
   const showNavbar = !noNavbarRoutes.includes(location.pathname);
