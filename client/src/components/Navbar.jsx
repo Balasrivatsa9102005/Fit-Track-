@@ -4,18 +4,18 @@ import "../styles/Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const isLoggedIn = true; // Replace with actual auth state
+  const isLoggedIn = true; 
 
   const handleLogout = () => {
-    // Add logout logic here
+
     console.log('User logged out');
-    navigate('/'); // Redirect to landing page
+    navigate('/'); 
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/dashboard" className="navbar-logo">FitTrack</Link> {/* Changed to /dashboard */}
+        <Link to="/dashboard" className="navbar-logo">FitTrack</Link> 
       </div>
       
       <div className="navbar-links">
