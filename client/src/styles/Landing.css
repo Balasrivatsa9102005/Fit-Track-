@@ -1,0 +1,152 @@
+/* Full-page background image */
+.landing-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://explosivewhey.com/cdn/shop/articles/best-workout-routine-for-gym-beginners-135325.png?v=1738755379&width=2048') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Dark overlay for better text contrast */
+.landing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Content positioning */
+.landing-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Typography */
+.landing-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.landing-title span {
+  color: #4CAF50; /* Fitness green accent */
+  font-weight: 700;
+}
+
+.landing-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+}
+
+/* Buttons */
+.landing-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.cta-button {
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #3e8e41;
+  transform: scale(1.05);
+}
+
+.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-title {
+    font-size: 2.5rem;
+  }
+  
+  .landing-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .landing-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+/* Add this to your existing Landing.css */
+
+.landing-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Blurred background */
+.landing-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://explosivewhey.com/cdn/shop/articles/best-workout-routine-for-gym-beginners-135325.png?v=1738755379&width=2048') no-repeat center center;
+  background-size: cover;
+  filter: blur(5px); /* Adjust blur amount (3px-8px works best) */
+  z-index: 0;
+  transform: scale(1.02); /* Prevents white edges from blur */
+}
+
+/* Dark overlay (optional) */
+.landing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Make sure your content stays sharp */
+.landing-content {
+  position: relative;
+  z-index: 2; /* Must be higher than blurred layer */
+  /* Rest of your existing styles */
+}

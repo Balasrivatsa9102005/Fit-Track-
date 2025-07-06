@@ -1,0 +1,127 @@
+/* Main container - full grey background */
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Soft grey for entire page */
+}
+
+/* Image section (left side) - now shows image with overlay */
+.image-section {
+  flex: 1;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg') center/cover;
+}
+
+/* Form section (right side) - blends with page bg */
+.form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* No background-color here - uses parent's grey */
+}
+
+/* Card styling - white form pops on grey */
+.register-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Rest of your CSS remains the same */
+/* Typography */
+.register-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.register-subtitle {
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Button styling */
+.register-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.register-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Login link */
+.login-link {
+  margin-top: 20px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.login-link span {
+  color: #3498db;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.login-link span:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Responsive design - stack on mobile */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+  
+  .image-section {
+    height: 200px; /* Reduced height for mobile */
+  }
+  
+  .form-section {
+    padding: 20px;
+  }
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
