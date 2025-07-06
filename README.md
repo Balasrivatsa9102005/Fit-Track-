@@ -26,7 +26,7 @@ and powerful chart visualizations for tracking calories, workouts, and muscle gr
 📦 INSTALLATION
 
 1. Clone the repo
-   git clone https://github.com/your-username/workout-dashboard.git
+   git clone [https://github.com/your-username/workout-dashboard.git](https://github.com/Balasrivatsa9102005/Fit-Track-/tree/main)
    cd workout-dashboard
 
 2. Install dependencies
